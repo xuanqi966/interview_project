@@ -71,7 +71,8 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: ListView.builder(
                 itemBuilder: (ctx, index) {
-                  return PostItem(postData.getPosts.reversed.toList()[index]);
+                  return PostItem(postData.getPosts.reversed
+                      .toList()[index]); // to keep latest post at the top
                 },
                 itemCount: postData.getPosts.length,
               )),
